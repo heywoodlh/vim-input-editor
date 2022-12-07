@@ -14,6 +14,8 @@ Supported only on hosts running X11 with `xdotool` and `xclip` installed.
 ./vim-ime.py --cmd "xterm -e vim" --outfile "/tmp/vim-ime.txt"
 ```
 
+Here's the GNOME keyboard shortcut that I use to launch `vim-ime.py`: https://github.com/heywoodlh/nixos-configs/blob/c2db8033490d7317c5a9609b55aba5e345d968be/workstation/desktop.nix#L360
+
 ### Help:
 
 ```
