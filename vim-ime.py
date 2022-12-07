@@ -60,7 +60,12 @@ exit_code = subprocess.run(ime_cmd, shell=True).returncode
 if exit_code == 0:
     with open(args.outfile, 'r') as f:
         if not args.clipboard_copy:
-            subprocess.call(['xdotool', 'type', '--clearmodifiers', f.read()])
+            # For line in file print with xdotool and print newlines between 
+            for line in f:
+                subprocess.call(['xdotool', 'type', '--clearmodifiers', line])
+                subprocess.call(['xdotool', 'key', 'Return'])
+            # Use xdotool to type the contents of outfile and preserve newlines
+            #subprocess.call(['xdotool', 'type', '--clearmodifiers', f.read()])
         else:
             subprocess.call(['xclip', '-selection', 'clipboard'], stdin=f)
         f.close()
