@@ -6,6 +6,8 @@ Basically just a Python alternative to [vime](https://github.com/pop-os/shell).
 
 Supported only on hosts running X11 with `xdotool` and `xclip` installed.
 
+![vim-input-editor in action](./usage.gif)
+
 ## Usage: 
 
 ```
